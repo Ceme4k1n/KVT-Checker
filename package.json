@@ -1,0 +1,26 @@
+{
+  "name": "kvt-checker",
+  "version": "1.0.0",
+  "description": "Система мониторинга температуры и влажности КВТ",
+  "main": "src/server/index.js",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "dev": "nodemon src/server/index.js",
+    "client": "cd src/client && npm start",
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7",
+    "modbus-serial": "^8.0.12",
+    "winston": "^3.11.0",
+    "node-telegram-bot-api": "^0.64.0",
+    "nodemailer": "^6.9.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "concurrently": "^8.2.2"
+  }
+}
